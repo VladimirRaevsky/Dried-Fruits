@@ -1,0 +1,20 @@
+.nav {
+
+    &List {
+        display: inline-flex;
+    }
+
+    &Item {
+        color: var(--secondary-color);
+        margin-left: clamp(0.938rem, -0.202rem + 2.37vw, 1.875rem);
+
+       & > a {
+            color: inherit;
+        }
+    }
+    
+}
+
+.active {
+    color: var(--active-link);
+}
