@@ -1,18 +1,14 @@
-import { FC } from 'react';
-import cls from './DeliveryPage.module.scss';
+import { type FC } from 'react'
+import cls from './DeliveryPage.module.scss'
 
 interface DeliveryPageProps {
-    className?: string;
+    className?: string
 }
 
 const DeliveryPage: FC<DeliveryPageProps> = (props) => {
-    const { className } = props;
+    const { className } = props
 
-    return (
-        <div className=''>
-            DeliveryPage
-        </div>
-    );
+    return <div className="">DeliveryPage</div>
 }
 
-export default DeliveryPage;
+export default DeliveryPage

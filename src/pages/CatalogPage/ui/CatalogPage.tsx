@@ -1,18 +1,14 @@
-import { FC } from 'react';
-import cls from './CatalogPage.module.scss';
+import { type FC } from 'react'
+import cls from './CatalogPage.module.scss'
 
 interface CatalogPageProps {
-    className?: string;
+    className?: string
 }
 
 const CatalogPage: FC<CatalogPageProps> = (props) => {
-    const { className } = props;
+    const { className } = props
 
-    return (
-        <div className=''>
-            CatalogPage
-        </div>
-    );
+    return <div className="">CatalogPage</div>
 }
 
-export default CatalogPage;
+export default CatalogPage

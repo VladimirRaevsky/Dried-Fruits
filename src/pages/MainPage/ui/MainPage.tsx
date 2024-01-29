@@ -1,18 +1,14 @@
-import { FC } from 'react';
-import cls from './MainePage.module.scss';
+import { type FC } from 'react'
+import cls from './MainePage.module.scss'
 
 interface MainePageProps {
-    className?: string;
+    className?: string
 }
 
 const MainPage: FC<MainePageProps> = (props) => {
-    const { className } = props;
+    const { className } = props
 
-    return (
-        <div className=''>
-            MainPage
-        </div>
-    );
+    return <div className="">MainPage</div>
 }
 
-export default MainPage;
+export default MainPage

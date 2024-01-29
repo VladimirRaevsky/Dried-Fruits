@@ -1,37 +1,39 @@
-import { type FC } from "react";
-import { useLocation } from "react-router-dom";
-import { ClassNames } from "shared/lib/helpers/ClassNames/ClassNames";
-import { AppLink } from "shared/ui/AppLink";
-import { Navigation_Paths } from "../const";
+import { type FC } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useLocation } from 'react-router-dom'
+import { ClassNames } from 'shared/lib/helpers/ClassNames/ClassNames'
+import { AppLink } from 'shared/ui/AppLink'
+import { Navigation_Paths } from '../const'
 
-import cls from "./Navigation.module.scss";
+import cls from './Navigation.module.scss'
 
 interface NavProps {
-	className?: string;
+    className?: string
 }
 
 export const Navigation: FC<NavProps> = (props) => {
-	const { className = "" } = props;
+    const { className = '' } = props
 
-	const { pathname } = useLocation();
+    const { t } = useTranslation('nav')
 
-	const isActive = (path: string): boolean => path === pathname;
+    const { pathname } = useLocation()
 
-	return (
-		<nav className={ClassNames(cls.nav, {}, [className])}>
-			<ul className={cls.navList}>
-				{Navigation_Paths.map((el) => (
-					<li
-						className={ClassNames(cls.navItem, {}, [
-							isActive(el.path) ? cls.active : "",
-						])}
-					>
-						<AppLink key={el.text} path={el.path}>
-							{el.text}
-						</AppLink>
-					</li>
-				))}
-			</ul>
-		</nav>
-	);
-};
+    const isActive = (path: string): boolean => path === pathname
+
+    return (
+        <nav className={ClassNames(cls.nav, {}, [className])}>
+            <ul className={cls.navList}>
+                {Navigation_Paths.map((el) => (
+                    <li
+                        key={el.path}
+                        className={ClassNames(cls.navItem, {}, [
+                            isActive(el.path) ? cls.active : '',
+                        ])}
+                    >
+                        <AppLink path={el.path}>{t(el.text)}</AppLink>
+                    </li>
+                ))}
+            </ul>
+        </nav>
+    )
+}
