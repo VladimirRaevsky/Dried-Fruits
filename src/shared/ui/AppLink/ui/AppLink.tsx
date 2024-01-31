@@ -2,13 +2,13 @@ import { type FC } from 'react'
 import { Link } from 'react-router-dom'
 import { ClassNames } from 'shared/lib/helpers/ClassNames/ClassNames'
 import { type AppLinkProps } from '../types'
-import cls from './AppLink.module.scss'
+// import cls from './AppLink.module.scss'регулярка для игнорирования файлов ts tsx
 
 export const AppLink: FC<AppLinkProps> = (props) => {
     const { className = '', path, children } = props
 
     return (
-        <Link to={path} className={ClassNames(cls.appLink, {}, [className])}>
+        <Link to={path} className={ClassNames('cls.appLink', {}, [className])}>
             {children}
         </Link>
     )

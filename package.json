@@ -16,6 +16,19 @@
         "storybook": "storybook dev -p 6006 -c ./config/storybook -s public",
         "storybook:build": "storybook build -c ./config/storybook"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged --relative"
+        }
+    },
+    "lint-staged": {
+        "*.ts": [
+            "eslint --fix"
+        ],
+        "*.(css|scss)": [
+            "stylelint --fix"
+        ]
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",
@@ -39,13 +52,23 @@
         "eslint-plugin-react": "^7.33.2",
         "file-loader": "^6.2.0",
         "html-webpack-plugin": "^5.5.0",
+        "husky": "^9.0.7",
         "jest": "^29.7.0",
         "jest-environment-jsdom": "^29.7.0",
+        "lint-staged": "^15.2.1",
         "mini-css-extract-plugin": "^2.5.3",
         "prettier": "3.2.4",
         "sass": "^1.49.9",
         "sass-loader": "^12.6.0",
         "style-loader": "^3.3.1",
+        "stylelint": "^16.2.0",
+        "stylelint-config-prettier": "^9.0.5",
+        "stylelint-config-rational-order": "^0.1.2",
+        "stylelint-config-standard": "^36.0.0",
+        "stylelint-order": "^6.0.4",
+        "stylelint-prettier": "^5.0.0",
+        "stylelint-scss": "^6.1.0",
+        "ts-jest": "^29.1.2",
         "ts-loader": "^9.2.6",
         "ts-node": "^10.5.0",
         "typescript": "^5.3.3",

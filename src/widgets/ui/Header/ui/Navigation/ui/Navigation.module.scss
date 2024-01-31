@@ -1,18 +1,16 @@
 .nav {
-
     &List {
         display: inline-flex;
     }
 
     &Item {
-        color: var(--secondary-color);
         margin-left: clamp(0.938rem, -0.202rem + 2.37vw, 1.875rem);
+        color: var(--secondary-color);
 
-       & > a {
+        & > a {
             color: inherit;
         }
     }
-    
 }
 
 .active {

@@ -5,10 +5,8 @@
 @import './normalize.scss';
 
 .app {
-    color: var(--primary-color);
-    background-color: var(--bg-color);
-    font: var(--font-s);
-
     min-height: 100vh;
+    color: var(--primary-color);
+    font: var(--font-s);
+    background-color: var(--bg-color);
 }
-

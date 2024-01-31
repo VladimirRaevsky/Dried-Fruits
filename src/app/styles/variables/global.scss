@@ -1,29 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair:wght@300;600;700;900&display=swap');
 
 :root {
-    // fonts
+    /*
+    * fonts
+    */
     --font-family: 'Playfair', serif;
-
     --font-size-s: 16px;
     --line-hight-s: 23px;
     --font-s: var(--font-size-s) / var(--line-hight-s) var(--font-family);
-
     --font-size-m: 20px;
     --line-hight-m: 23px;
     --font-m: var(--font-size-m) / var(--line-hight-m) var(--font-family);
-
     --font-size-l: 27px;
     --line-hight-l: normal;
     --font-l: var(--font-size-l) / var(--line-hight-l) var(--font-family);
-
     --font-size-xl: 72px;
     --line-hight-xl: normal;
     --font-xl: var(--font-size-xl) / var(--line-hight-xl) var(--font-family);
-
     --font-size-xxl: 160px;
     --line-hight-xxl: 160px;
     --font-xxl: var(--font-size-xl) / var(--line-hight-xl) var(--font-family);
 
-    //colors
-    --active-link: rgb(246, 69, 69);
+    /*
+    * colors
+    */
+    --active-link: rgb(246 69 69);
 }
