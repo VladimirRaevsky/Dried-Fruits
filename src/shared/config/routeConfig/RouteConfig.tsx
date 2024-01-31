@@ -3,6 +3,7 @@ import { CatalogPage } from 'pages/CatalogPage'
 import { ContactsPage } from 'pages/ContactsPage'
 import { DeliveryPage } from 'pages/DeliveryPage'
 import { MainPage } from 'pages/MainPage'
+import { NotFoundPage } from 'pages/NotFoundPage'
 import { ShopsPage } from 'pages/ShopsPage'
 import { type RouteProps } from 'react-router-dom'
 
@@ -13,6 +14,7 @@ export enum AppRoutes {
     DELIVERY = 'delivery',
     SHOPS = 'shops',
     CONTACTS = 'contacts',
+    NOT_FOUND = 'not_found'
 }
 
 export const RoutePaths: Record<AppRoutes, string> = {
@@ -22,6 +24,7 @@ export const RoutePaths: Record<AppRoutes, string> = {
     [AppRoutes.DELIVERY]: '/delivery',
     [AppRoutes.SHOPS]: '/shops',
     [AppRoutes.CONTACTS]: '/contacts',
+    [AppRoutes.NOT_FOUND]: '*',
 }
 
 export const routerConfig: RouteProps[] = [
@@ -31,4 +34,5 @@ export const routerConfig: RouteProps[] = [
     { path: RoutePaths[AppRoutes.DELIVERY], element: <DeliveryPage /> },
     { path: RoutePaths[AppRoutes.SHOPS], element: <ShopsPage /> },
     { path: RoutePaths[AppRoutes.CONTACTS], element: <ContactsPage /> },
+    { path: RoutePaths[AppRoutes.NOT_FOUND], element: <NotFoundPage /> },
 ]

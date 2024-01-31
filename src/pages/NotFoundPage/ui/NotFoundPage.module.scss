@@ -1,0 +1,26 @@
+.wrapper {
+    position: relative;
+    inset: 0;
+    text-align: center;
+
+    &Title {
+        color: var(--inverted-primary-color);
+        font: var(--font-xxl);
+        font-weight: 900;
+    }
+
+    &Link {
+        padding: 1rem 4rem;
+        color: var(--inverted-primary-color);
+        font: var(--font-l);
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+        background: var(--inverted-bg-color);
+        border-radius: 4rem;
+        cursor: pointer;
+    }
+
+    &P {
+        margin-bottom: 20px;
+    }
+}

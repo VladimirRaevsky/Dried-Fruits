@@ -2,27 +2,49 @@
 
 :root {
     /*
-    * fonts
+    * FONTS
+    * S
     */
     --font-family: 'Playfair', serif;
     --font-size-s: 16px;
     --line-hight-s: 23px;
     --font-s: var(--font-size-s) / var(--line-hight-s) var(--font-family);
+
+    /*
+    * M
+    */
     --font-size-m: 20px;
     --line-hight-m: 23px;
     --font-m: var(--font-size-m) / var(--line-hight-m) var(--font-family);
+
+    /*
+    * L
+    */
     --font-size-l: 27px;
     --line-hight-l: normal;
     --font-l: var(--font-size-l) / var(--line-hight-l) var(--font-family);
-    --font-size-xl: 72px;
-    --line-hight-xl: normal;
-    --font-xl: var(--font-size-xl) / var(--line-hight-xl) var(--font-family);
-    --font-size-xxl: 160px;
-    --line-hight-xxl: 160px;
-    --font-xxl: var(--font-size-xl) / var(--line-hight-xl) var(--font-family);
 
     /*
-    * colors
+    * XL
+    */
+    --font-size-xl: clamp(1.125rem, -1.118rem + 6.24vw, 4.5rem);
+    --line-hight-xl: normal;
+    --font-xl: var(--font-size-xl) / var(--line-hight-xl) var(--font-family);
+
+    /*
+    * XXL
+    */
+    --font-size-xxl: clamp(4rem, 0.012rem + 11.1vw, 10rem);
+    --line-hight-xxl: clamp(4rem, 0.012rem + 11.1vw, 10rem);
+    --font-xxl: var(--font-size-xxl) / var(--line-hight-xxl) var(--font-family);
+
+    /*
+    * COLORS
     */
     --active-link: rgb(246 69 69);
+
+    /*
+    * SPEED
+    */
+    --speed: 0.3s;
 }

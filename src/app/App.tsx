@@ -22,11 +22,11 @@ export const App: FC = () => {
     return (
         <div className={ClassNames('app', {}, [theme])}>
             <Header />
+            <button onClick={handleThemeToggle}>switch</button>
+            <button onClick={handleLangToggle}>lang</button>
             <Container>
                 <AppRouter />
             </Container>
-            <button onClick={handleThemeToggle}>switch</button>
-            <button onClick={handleLangToggle}>lang</button>
         </div>
     )
 }
