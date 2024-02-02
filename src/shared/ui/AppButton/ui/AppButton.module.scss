@@ -1,0 +1,38 @@
+.appButton {
+    color: var(--button-color);
+    font: var(--font-m);
+    font-weight: 700;
+    background-color: var(--accent-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.default {
+    padding: 10px 38px;
+    border-radius: 13px;
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 60px;
+    max-height: 60px;
+    padding: 15px;
+    background-color: var(--accent-color);
+    border-radius: 20px;
+
+    & > svg {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.error {
+    padding: 0 20px;
+    color: var(--primary-color);
+    font: var(--font-m);
+    background-color: var(--error-color);
+    border-radius: 15px;
+}

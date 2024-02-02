@@ -5,10 +5,14 @@ import { type AppLinkProps } from '../types'
 // import cls from './AppLink.module.scss'
 
 export const AppLink: FC<AppLinkProps> = (props) => {
-    const { className = '', path, children } = props
+    const { className = '', path, children, ...othersProps } = props
 
     return (
-        <Link to={path} className={ClassNames('cls.appLink', {}, [className])}>
+        <Link
+            to={path}
+            className={ClassNames('cls.appLink', {}, [className])}
+            {...othersProps}
+        >
             {children}
         </Link>
     )

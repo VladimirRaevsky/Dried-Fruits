@@ -1,4 +1,4 @@
-import { type FC } from 'react'
+import { useEffect, type FC } from 'react'
 import { AppRouter } from 'app/providers/router'
 import { Header } from 'widgets/ui/Header'
 
@@ -9,6 +9,11 @@ import { Container } from 'shared/ui/Container/ui/Container'
 import '../shared/config/i18/i18n'
 import './styles/index.scss'
 import { useTranslation } from 'react-i18next'
+import { AppButton } from 'shared/ui/AppButton'
+import { ThemeButton, TypeButton } from 'shared/ui/AppButton/types'
+import { IoIosSearch } from 'react-icons/io'
+
+import cls from './App.module.scss'
 
 export const App: FC = () => {
     const { theme, handleThemeToggle } = useTheme()
@@ -22,8 +27,22 @@ export const App: FC = () => {
     return (
         <div className={ClassNames('app', {}, [theme])}>
             <Header />
-            <button onClick={handleThemeToggle}>switch</button>
-            <button onClick={handleLangToggle}>lang</button>
+            <AppButton
+                onClick={handleThemeToggle}
+                type={TypeButton.BUTTON}
+                theme={ThemeButton.DEFAULT}
+                className={cls.right}
+            >
+                {'switch'}
+            </AppButton>
+
+            <AppButton
+                onClick={handleLangToggle}
+                type={TypeButton.BUTTON}
+                theme={ThemeButton.DEFAULT}
+            >
+                {'lang'}
+            </AppButton>
             <Container>
                 <AppRouter />
             </Container>

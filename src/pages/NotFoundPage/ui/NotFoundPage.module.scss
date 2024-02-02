@@ -1,16 +1,27 @@
-.wrapper {
-    position: relative;
-    inset: 0;
-    text-align: center;
+.foundPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    &Wrapper {
+        text-align: center;
+    }
+
+    &Img {
+        max-width: 80%;
+    }
 
     &Title {
+        margin: 0;
         color: var(--inverted-primary-color);
         font: var(--font-xxl);
         font-weight: 900;
     }
 
     &Link {
-        padding: 1rem 4rem;
+        padding: 0 25px;
         color: var(--inverted-primary-color);
         font: var(--font-l);
         letter-spacing: 0.05rem;
@@ -22,5 +33,7 @@
 
     &P {
         margin-bottom: 20px;
+        font: var(--font-m);
+        font-weight: 900;
     }
 }

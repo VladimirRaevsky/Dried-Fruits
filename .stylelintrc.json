@@ -7,6 +7,8 @@
     "plugins": ["stylelint-order", "stylelint-scss"],
     "ignoreFiles": ["**/*.ts", "**/*.tsx"],
     "rules": {
-        "import-notation": null
+        "import-notation": null,
+        "selector-class-pattern": "^[a-z][a-zA-Z0-9_-]+$",
+        "selector-id-pattern": "^[a-z][a-zA-Z0-9_-]+$"
     }
 }
