@@ -3,7 +3,7 @@ import { type BuildOptions } from './types/config'
 
 export function buildResolve(options: BuildOptions): ResolveOptions {
     const {
-        paths: { src },
+        paths: { src, scssMixin },
     } = options
 
     return {
@@ -11,6 +11,8 @@ export function buildResolve(options: BuildOptions): ResolveOptions {
         mainFiles: ['index'],
         preferAbsolute: true,
         modules: [src, 'node_modules'],
-        alias: {},
+        alias: {
+            'scss-mixin': scssMixin,
+        },
     }
 }

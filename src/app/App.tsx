@@ -11,9 +11,9 @@ import './styles/index.scss'
 import { useTranslation } from 'react-i18next'
 import { AppButton } from 'shared/ui/AppButton'
 import { ThemeButton, TypeButton } from 'shared/ui/AppButton/types'
-import { IoIosSearch } from 'react-icons/io'
 
 import cls from './App.module.scss'
+import { Title, TitleSize } from 'shared/ui/Title'
 
 export const App: FC = () => {
     const { theme, handleThemeToggle } = useTheme()
@@ -43,6 +43,7 @@ export const App: FC = () => {
             >
                 {'lang'}
             </AppButton>
+            <Title size={TitleSize.H1}>{'Заголовок'}</Title>
             <Container>
                 <AppRouter />
             </Container>

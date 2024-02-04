@@ -6,8 +6,9 @@
     min-height: 100vh;
     color: var(--primary-color);
     background-color: var(--bg-color);
+}
 
-    & > p {
-        margin-bottom: 10px;
-    }
+#errorP {
+    margin-bottom: 10px;
+    color: var(--primary-color);
 }

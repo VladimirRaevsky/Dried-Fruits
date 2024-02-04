@@ -7,6 +7,8 @@
         "start": "webpack serve --env port=3000",
         "build:prod": "webpack --env mode=production",
         "build:dev": "webpack --env mode=development",
+        "analyze:prod": "webpack --env mode=production analyze=true",
+        "analyze:dev": "webpack --env mode=development analyze=true",
         "eslint:ts": "eslint \"**/*.{ts,tsx}\"",
         "eslint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
         "stylelint:scss": "stylelint \"**/*.scss\"",
@@ -40,6 +42,7 @@
         "@types/react-dom": "^18.2.18",
         "@types/react-router-dom": "^5.3.3",
         "@types/webpack": "^5.28.0",
+        "@types/webpack-bundle-analyzer": "^4.6.3",
         "@types/webpack-dev-server": "^4.7.2",
         "@typescript-eslint/eslint-plugin": "^6.19.1",
         "css-loader": "^6.6.0",
@@ -73,6 +76,7 @@
         "ts-node": "^10.5.0",
         "typescript": "^5.3.3",
         "webpack": "^5.69.1",
+        "webpack-bundle-analyzer": "^4.10.1",
         "webpack-cli": "^4.10.0",
         "webpack-dev-server": "^4.7.1"
     },
@@ -87,3 +91,4 @@
         "react-router-dom": "^6.21.3"
     }
 }
+

@@ -1,8 +1,7 @@
 import { type FC } from 'react'
 import { useTranslation } from 'react-i18next'
-
-import { AppButton } from 'shared/ui/AppButton'
-import { ThemeButton, TypeButton } from 'shared/ui/AppButton/types'
+import { AppButton, ThemeButton, TypeButton } from 'shared/ui/AppButton'
+import { Paragraph, ParagraphSize } from 'shared/ui/Paragraph'
 
 import cls from './ErrorPage.module.scss'
 
@@ -15,7 +14,10 @@ export const ErrorPage: FC = () => {
 
     return (
         <div className={cls.error}>
-            <p>{t('НЕ ИЗВЕСТНАЯ ОШИБКА')}</p>
+            <Paragraph size={ParagraphSize.L} id={cls.errorP}>
+                {t('НЕ ИЗВЕСТНАЯ ОШИБКА')}
+            </Paragraph>
+
             <AppButton
                 theme={ThemeButton.ERROR}
                 type={TypeButton.BUTTON}

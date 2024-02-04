@@ -1,0 +1,9 @@
+/* stylelint-disable at-rule-no-unknown */
+@mixin hoverSupported {
+    @media (hover: hover) {
+        &:hover {
+            opacity: 0.8;
+            transition: opacity var(--speed);
+        }
+    }
+}
