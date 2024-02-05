@@ -5,7 +5,7 @@ interface ShopsPageProps {
 }
 
 const ShopsPage: FC<ShopsPageProps> = (props) => {
-    return <div className="">'ShopsPage'</div>
+    return <div className=""></div>
 }
 
 export default ShopsPage

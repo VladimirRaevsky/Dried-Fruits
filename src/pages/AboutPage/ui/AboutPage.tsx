@@ -5,7 +5,7 @@ interface AboutPageProps {
 }
 
 const AboutPage: FC<AboutPageProps> = (props) => {
-    return <div className="">AboutPage</div>
+    return <div className=""></div>
 }
 
 export default AboutPage

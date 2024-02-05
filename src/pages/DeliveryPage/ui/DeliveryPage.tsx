@@ -5,8 +5,7 @@ interface DeliveryPageProps {
 }
 
 const DeliveryPage: FC<DeliveryPageProps> = (props) => {
-
-    return <div className="">'DeliveryPage'</div>
+    return <div className=""></div>
 }
 
 export default DeliveryPage

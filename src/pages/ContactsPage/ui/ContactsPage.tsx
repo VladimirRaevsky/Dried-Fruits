@@ -5,7 +5,7 @@ interface ContactsPageProps {
 }
 
 const ContactsPage: FC<ContactsPageProps> = (props) => {
-    return <div className="">'ContactsPage'</div>
+    return <div className=""></div>
 }
 
 export default ContactsPage
