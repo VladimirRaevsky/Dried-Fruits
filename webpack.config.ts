@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import path from 'path'
 import type webpack from 'webpack'
 import { type BuildEnv, type BuildPaths } from './config/build/types/config'
@@ -9,20 +10,23 @@ export default (env: BuildEnv): webpack.Configuration => {
         build: path.resolve(__dirname, 'build'),
         html: path.resolve(__dirname, 'public', 'index.html'),
         src: path.resolve(__dirname, 'src'),
-        scssMixin: path.resolve(__dirname, 'src', './app/styles/mixins/index.scss')
+        scssMixin: path.resolve(
+            __dirname,
+            'src',
+            './app/styles/mixins/index.scss',
+        ),
     }
-    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-    const mode = env.mode || 'production'
-    const isDev = mode === 'development'
-    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-    const PORT = env.port || 5000
 
-    console.log(mode)
+    const mode = env.mode || 'development'
+    const isDev = mode === 'development'
+    const analyze = env.analyze ? 'server' : 'disabled'
+    const PORT = env.port || 5000
 
     const config: webpack.Configuration = buildWebpackConfig({
         mode,
         paths,
         isDev,
+        analyze,
         port: PORT,
     })
 

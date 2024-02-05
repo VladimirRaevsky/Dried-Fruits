@@ -6,9 +6,9 @@ import { type BuildOptions } from './types/config'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 export function buildPlugins(
-    options: BuildOptions,
+    webpackOptions: BuildOptions,
 ): webpack.WebpackPluginInstance[] {
-    const { paths } = options
+    const { paths, analyze } = webpackOptions
 
     return [
         // new webpack.DefinePlugin({
@@ -23,7 +23,8 @@ export function buildPlugins(
             chunkFilename: 'css/[id].[contenthash:8].css',
         }),
         new webpack.ProgressPlugin(),
-        new BundleAnalyzerPlugin(),
+        new BundleAnalyzerPlugin({
+            analyzerMode: analyze,
+        }),
     ]
 }
-// analyzerMode: process.env.analyze ? 'server' : 'disabled'

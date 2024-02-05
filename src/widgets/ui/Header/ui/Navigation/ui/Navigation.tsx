@@ -4,12 +4,9 @@ import { useLocation } from 'react-router-dom'
 import { ClassNames } from 'shared/lib/helpers/ClassNames/ClassNames'
 import { AppLink } from 'shared/ui/AppLink'
 import { Navigation_Paths } from '../const'
+import { type NavProps } from '../types'
 
 import cls from './Navigation.module.scss'
-
-interface NavProps {
-    className?: string
-}
 
 export const Navigation: FC<NavProps> = (props) => {
     const { className = '' } = props

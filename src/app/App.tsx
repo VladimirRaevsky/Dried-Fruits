@@ -1,4 +1,4 @@
-import { useEffect, type FC } from 'react'
+import { type FC } from 'react'
 import { AppRouter } from 'app/providers/router'
 import { Header } from 'widgets/ui/Header'
 

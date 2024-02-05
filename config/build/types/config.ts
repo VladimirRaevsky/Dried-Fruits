@@ -1,5 +1,7 @@
 export type BuildMode = 'production' | 'development'
 
+export type Analyze = 'server' | 'disabled'
+
 export interface BuildPaths {
     entry: string
     build: string
@@ -11,6 +13,7 @@ export interface BuildPaths {
 export interface BuildEnv {
     mode: BuildMode
     port: number
+    analyze: Analyze
 }
 
 export interface BuildOptions {
@@ -18,4 +21,5 @@ export interface BuildOptions {
     paths: BuildPaths
     isDev: boolean
     port: number
+    analyze: Analyze
 }

@@ -5,6 +5,7 @@ import { buildResolve } from './buildResolve'
 import { buildPlugins } from './buildPlugins'
 import { type BuildOptions } from './types/config'
 import { buildDevServer } from './buildDevServer'
+import { buildMinimizer } from './buildMinimizer'
 
 export function buildWebpackConfig(
     options: BuildOptions,
@@ -20,7 +21,7 @@ export function buildWebpackConfig(
             clean: true,
         },
         optimization: {
-            minimize: false,
+            minimizer: buildMinimizer(),
         },
         module: {
             rules: buildLoaders(options),

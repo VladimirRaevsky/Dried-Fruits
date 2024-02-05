@@ -4,7 +4,8 @@ import { type BuildOptions } from './types/config'
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     const svgLoader = {
-        test: /\.svg$/,
+        test: /\.svg$/i,
+        type: 'asset',
         use: ['@svgr/webpack'],
     }
 
@@ -20,9 +21,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     const scssLoader = {
         test: /\.s[ac]ss$/i,
         use: [
-            // Creates `style` nodes from JS strings
             options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-            // Translates CSS into CommonJS
             {
                 loader: 'css-loader',
                 options: {
