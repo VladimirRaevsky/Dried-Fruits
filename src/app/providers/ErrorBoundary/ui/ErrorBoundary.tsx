@@ -1,5 +1,6 @@
 import { ErrorPage } from 'pages/ErrorPage'
 import React, { type ReactNode, type ErrorInfo, Suspense } from 'react'
+
 import { type ErrorBoundaryProps, type ErrorBoundaryState } from '../types'
 
 export class ErrorBoundary extends React.Component<

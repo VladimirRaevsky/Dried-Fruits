@@ -1,5 +1,6 @@
 import { describe, expect, test } from '@jest/globals'
-import { ClassNames } from './ClassNames'
+
+import { ClassNames } from '.'
 
 describe('Checking the function', () => {
     test('should return one class', () => {

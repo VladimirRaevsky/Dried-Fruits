@@ -1,11 +1,13 @@
-import type webpack from 'webpack'
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+import webpack from 'webpack'
+
 import 'webpack-dev-server'
-import { buildLoaders } from './buildLoaders'
-import { buildResolve } from './buildResolve'
-import { buildPlugins } from './buildPlugins'
-import { type BuildOptions } from './types/config'
 import { buildDevServer } from './buildDevServer'
+import { buildLoaders } from './buildLoaders'
 import { buildMinimizer } from './buildMinimizer'
+import { buildPlugins } from './buildPlugins'
+import { buildResolve } from './buildResolve'
+import { type BuildOptions } from './types/config'
 
 export function buildWebpackConfig(
     options: BuildOptions,

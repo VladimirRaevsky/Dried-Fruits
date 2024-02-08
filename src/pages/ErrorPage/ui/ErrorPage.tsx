@@ -15,7 +15,7 @@ export const ErrorPage: FC = () => {
     return (
         <div className={cls.error}>
             <Paragraph size={ParagraphSize.L} id={cls.errorP}>
-                {t('НЕ ИЗВЕСТНАЯ ОШИБКА')}
+                {t('Не известная ошибка')}
             </Paragraph>
 
             <AppButton

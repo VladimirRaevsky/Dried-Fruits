@@ -9,7 +9,16 @@
             "env": {
                 "node": true
             },
-            "files": [".eslintrc.{js,cjs,tsx,ts}"],
+            "files": [
+                "**/src/**/*.test.{ts,tsx}",
+                "**/config/jest/*.ts",
+                "**/src/**/const/*.ts"
+            ],
+            "rules": {
+                "i18next/no-literal-string": "off",
+                "no-multiple-empty-lines": "off",
+                "@typescript-eslint/naming-convention": "off"
+            },
             "parserOptions": {
                 "sourceType": "script"
             }
@@ -29,7 +38,29 @@
         "space-before-function-paren": 0,
         "@typescript-eslint/space-before-function-paren": 0,
         "@typescript-eslint/no-unused-vars": 1,
-        "i18next/no-literal-string": 2
+        "i18next/no-literal-string": [2, { "ignore": ["data-testId"] }],
+        "import/order": [
+            2,
+            {
+                "groups": [
+                    "external",
+                    "builtin",
+                    "index",
+                    "sibling",
+                    "parent",
+                    "internal",
+                    "type"
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                },
+                "newlines-between": "always-and-inside-groups"
+            }
+        ]
+    },
+    "globals": {
+        "IS_DEV": true
     }
 }
 

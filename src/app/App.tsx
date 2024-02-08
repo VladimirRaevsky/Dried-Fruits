@@ -1,19 +1,19 @@
-import { type FC } from 'react'
 import { AppRouter } from 'app/providers/router'
-import { Header } from 'widgets/ui/Header'
-
-import { ClassNames } from 'shared/lib/helpers/ClassNames/ClassNames'
-import { useTheme } from './providers/ThemeProviders'
-import { Container } from 'shared/ui/Container/ui/Container'
+import { type FC } from 'react'
 
 import '../shared/config/i18/i18n'
 import './styles/index.scss'
 import { useTranslation } from 'react-i18next'
+import { ClassNames } from 'shared/lib/helpers/ClassNames'
 import { AppButton } from 'shared/ui/AppButton'
 import { ThemeButton, TypeButton } from 'shared/ui/AppButton/types'
 
-import cls from './App.module.scss'
+import { Container } from 'shared/ui/Container'
 import { Title, TitleSize } from 'shared/ui/Title'
+import { Header } from 'widgets/ui/Header'
+
+import cls from './App.module.scss'
+import { useTheme } from './providers/ThemeProviders'
 
 export const App: FC = () => {
     const { theme, handleThemeToggle } = useTheme()

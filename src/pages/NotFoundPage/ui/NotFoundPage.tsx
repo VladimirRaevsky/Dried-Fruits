@@ -1,10 +1,12 @@
 import { type FC } from 'react'
 import { useTranslation } from 'react-i18next'
-import { AppLink } from 'shared/ui/AppLink'
 import Bg from 'shared/assets/img/bg.png'
 import Bg2x from 'shared/assets/img/bg@2x.png'
-import cls from './NotFoundPage.module.scss'
+import { AppLink } from 'shared/ui/AppLink'
+
 import { Paragraph, ParagraphSize } from 'shared/ui/Paragraph'
+
+import cls from './NotFoundPage.module.scss'
 
 export const NotFoundPage: FC = () => {
     const { t } = useTranslation('404')

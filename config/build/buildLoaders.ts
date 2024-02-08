@@ -1,11 +1,13 @@
-import type webpack from 'webpack'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+
 import { type BuildOptions } from './types/config'
+
+import type webpack from 'webpack'
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     const svgLoader = {
         test: /\.svg$/i,
-        type: 'asset',
+        // type: 'asset',
         use: ['@svgr/webpack'],
     }
 

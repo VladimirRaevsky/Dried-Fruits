@@ -1,6 +1,7 @@
-import type webpack from 'webpack'
-import TerserPlugin from 'terser-webpack-plugin'
 import ImageMinimizerPlugin from 'image-minimizer-webpack-plugin'
+import TerserPlugin from 'terser-webpack-plugin'
+
+import type webpack from 'webpack'
 
 export function buildMinimizer(): webpack.WebpackPluginInstance[] {
     return [

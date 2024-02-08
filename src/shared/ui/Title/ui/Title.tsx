@@ -1,7 +1,9 @@
 import { type FC } from 'react'
-import { ClassNames } from 'shared/lib/helpers/ClassNames/ClassNames'
-import { TitleLevel, type TitleProps } from '../types'
+import { ClassNames } from 'shared/lib/helpers/ClassNames'
+
 import cls from './Title.module.scss'
+
+import { TitleLevel, type TitleProps } from '../types'
 
 export const Title: FC<TitleProps> = (props) => {
     const { className = '', children, size, ...othersProps } = props

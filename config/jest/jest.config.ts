@@ -43,6 +43,24 @@ const config: Config = {
     modulePaths: ['<rootDir>/src'],
 
     rootDir: '../../',
+
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTest.ts'],
+
+    moduleNameMapper: {
+        'src/(.*)': '<rootDir>/src/$1',
+        'tests/(.*)': '<rootDir>/__tests__/$1',
+        '\\.(s?css|less)$': 'identity-obj-proxy',
+    },
+
+    // Indicates which provider should be used to instrument code for coverage
+    coverageProvider: 'v8',
+
+    // A list of paths to directories that Jest should use to search for files in
+    roots: ['<rootDir>'],
+
+    // The test environment that will be used for testing
+    testEnvironment: 'jsdom',
+
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
@@ -56,9 +74,6 @@ const config: Config = {
     // coveragePathIgnorePatterns: [
     //   "\\\\node_modules\\\\"
     // ],
-
-    // Indicates which provider should be used to instrument code for coverage
-    coverageProvider: 'v8',
 
     // A list of reporter names that Jest uses when writing coverage reports
     // coverageReporters: [
@@ -135,9 +150,6 @@ const config: Config = {
     // The root directory that Jest should scan for tests and modules within
     // rootDir: undefined,
 
-    // A list of paths to directories that Jest should use to search for files in
-    roots: ['<rootDir>'],
-
     // Allows you to use a custom runner instead of Jest's default test runner
     // runner: "jest-runner",
 
@@ -152,9 +164,6 @@ const config: Config = {
 
     // A list of paths to snapshot serializer modules Jest should use for snapshot testing
     // snapshotSerializers: [],
-
-    // The test environment that will be used for testing
-    testEnvironment: 'jsdom',
 
     // Options that will be passed to the testEnvironment
     // testEnvironmentOptions: {},
@@ -194,3 +203,4 @@ const config: Config = {
 }
 
 export default config
+

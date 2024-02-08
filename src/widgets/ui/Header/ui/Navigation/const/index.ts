@@ -1,6 +1,5 @@
 import { AppRoutes, RoutePaths } from 'shared/config/routeConfig/RouteConfig'
 
-// eslint-disable-next-line @typescript-eslint/naming-convention
 export const Navigation_Paths = [
     { path: RoutePaths[AppRoutes.MAIN], text: 'Главная' },
     { path: RoutePaths[AppRoutes.CATALOG], text: 'Каталог' },

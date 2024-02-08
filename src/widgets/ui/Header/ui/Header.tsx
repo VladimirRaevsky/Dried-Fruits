@@ -1,6 +1,8 @@
 import { type FC } from 'react'
-import { ClassNames } from 'shared/lib/helpers/ClassNames/ClassNames'
-import { Container } from 'shared/ui/Container/ui/Container'
+
+import { ClassNames } from 'shared/lib/helpers/ClassNames'
+import { Container } from 'shared/ui/Container'
+
 import cls from './Header.module.scss'
 import { Navigation } from './Navigation/ui/Navigation'
 

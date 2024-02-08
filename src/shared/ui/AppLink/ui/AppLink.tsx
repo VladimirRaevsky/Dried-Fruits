@@ -1,8 +1,8 @@
 import { type FC } from 'react'
 import { Link } from 'react-router-dom'
-import { ClassNames } from 'shared/lib/helpers/ClassNames/ClassNames'
+import { ClassNames } from 'shared/lib/helpers/ClassNames'
+
 import { type AppLinkProps } from '../types'
-// import cls from './AppLink.module.scss'
 
 export const AppLink: FC<AppLinkProps> = (props) => {
     const { className = '', path, children, ...othersProps } = props
