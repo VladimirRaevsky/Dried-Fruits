@@ -1,8 +1,7 @@
 {
     "extends": [
         "stylelint-config-standard",
-        "stylelint-config-rational-order",
-        "stylelint-prettier/recommended"
+        "stylelint-config-rational-order"
     ],
     "plugins": ["stylelint-order", "stylelint-scss"],
     "ignoreFiles": ["**/*.ts", "**/*.tsx"],
